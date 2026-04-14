@@ -1,0 +1,29 @@
+/* Update these specific parts in your ScrollStack.css */
+.scroll-stack-card {
+  transform-origin: top center;
+  will-change: transform, filter;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  min-height: 450px; /* Increased for content */
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 32px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-stack-inner {
+  padding: 5vh 5rem 30vh; /* Adjusted padding */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hide scrollbar for the stack container */
+.scroll-stack-scroller {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scroll-stack-scroller::-webkit-scrollbar {
+  display: none;
+}

@@ -1,6 +1,7 @@
 import Banner from "./banner";
 import Navbar from "./navbar/navbar";
 import HorizontalSection from "./about/HorizontalSection";
+import Services from "./servicePage/Services";
 
 const Homepage = () => {
     return (
@@ -8,9 +9,7 @@ const Homepage = () => {
             <Navbar />
             <Banner />
             <HorizontalSection />
-            <div className="h-screen flex items-center justify-center">
-              <h2 className="text-white/20">Scroll down to see vertical footer...</h2>
-            </div>
+            <Services />
         </div>
     );
 };
