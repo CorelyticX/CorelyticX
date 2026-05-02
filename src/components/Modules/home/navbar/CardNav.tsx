@@ -128,23 +128,23 @@ const CardNav: React.FC<CardNavProps> = ({
         style={{ backgroundColor: baseColor }}
       >
         {/* Top Bar */}
-        <div className="mx-auto max-w-7xl h-[60px] flex items-center justify-between px-6 z-10 relative">
+        <div className="mx-auto w-full max-w-7xl h-[60px] flex items-center justify-between px-3 sm:px-4 md:px-6 z-10 relative">
           <div 
             className="flex flex-col gap-[6px] cursor-pointer md:order-none order-2 group"
             onClick={toggleMenu}
             style={{ color: menuColor }}
           >
-            <div className={`w-[24px] h-[2px] bg-current transition-all duration-300 ${isHamburgerOpen ? 'translate-y-[8px] rotate-45' : ''}`} />
-            <div className={`w-[24px] h-[2px] bg-current transition-all duration-300 ${isHamburgerOpen ? 'opacity-0' : ''}`} />
-            <div className={`w-[24px] h-[2px] bg-current transition-all duration-300 ${isHamburgerOpen ? '-translate-y-[8px] -rotate-45' : ''}`} />
+            <div className={`w-5 h-0.5 sm:w-6 sm:h-[2px] bg-current transition-all duration-300 ${isHamburgerOpen ? 'translate-y-2 rotate-45' : ''}`} />
+            <div className={`w-5 h-0.5 sm:w-6 sm:h-[2px] bg-current transition-all duration-300 ${isHamburgerOpen ? 'opacity-0' : ''}`} />
+            <div className={`w-5 h-0.5 sm:w-6 sm:h-[2px] bg-current transition-all duration-300 ${isHamburgerOpen ? '-translate-y-2 -rotate-45' : ''}`} />
           </div>
 
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 md:order-1">
-            <img src={logo} alt={logoAlt} className="h-8 w-auto brightness-0 invert-0 dark:invert" />
+            <img src={logo} alt={logoAlt} className="h-6 sm:h-7 md:h-8 w-auto brightness-0 invert-0 dark:invert" />
           </div>
 
           <button
-            className="hidden md:block h-10 px-6 rounded-full font-semibold transition-all hover:scale-105 active:scale-95"
+            className="hidden md:block h-9 sm:h-10 px-4 sm:px-6 rounded-full font-semibold text-sm sm:text-base transition-all hover:scale-105 active:scale-95"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
           >
             Get Started
@@ -153,24 +153,24 @@ const CardNav: React.FC<CardNavProps> = ({
 
         {/* Content/Cards Area */}
         <div 
-          className={`card-nav-content mx-auto max-w-7xl absolute left-0 right-0 top-[60px] p-6 flex flex-col md:flex-row md:items-stretch gap-4 transition-[visibility] ${isExpanded ? 'visible pointer-events-auto' : 'invisible pointer-events-none'}`}
+          className={`card-nav-content mx-auto w-full max-w-7xl absolute left-0 right-0 top-[60px] p-3 sm:p-4 md:p-6 flex flex-col md:flex-row md:items-stretch gap-2 sm:gap-3 md:gap-4 transition-[visibility] ${isExpanded ? 'visible pointer-events-auto' : 'invisible pointer-events-none'}`}
         >
           {items.map((item, idx) => (
             <div
               key={idx}
               ref={(el) => { if (el) cardsRef.current[idx] = el; }}
-              className="flex-1 min-w-0 rounded-2xl p-6 flex flex-col gap-4 min-h-[160px] md:h-auto border border-white/5 shadow-2xl transition-transform hover:scale-[1.02]"
+              className="flex-1 min-w-0 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 flex flex-col gap-3 sm:gap-4 min-h-[140px] sm:min-h-[160px] md:h-auto border border-white/5 shadow-2xl transition-transform hover:scale-[1.02]"
               style={{ backgroundColor: item.bgColor, color: item.textColor }}
             >
-              <div className="text-2xl md:text-3xl font-bold tracking-tight">{item.label}</div>
-              <div className="mt-auto flex flex-col gap-2">
+              <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight">{item.label}</div>
+              <div className="mt-auto flex flex-col gap-2 text-xs sm:text-sm md:text-base">
                 {item.links.map((lnk, i) => (
                   <a 
                     key={i} 
                     href={lnk.href} 
-                    className="text-lg inline-flex items-center gap-2 opacity-80 hover:opacity-100 transition-all hover:translate-x-1"
+                    className="inline-flex items-center gap-2 opacity-80 hover:opacity-100 transition-all hover:translate-x-1"
                   >
-                    <GoArrowUpRight className="text-xl" aria-hidden="true" />
+                    <GoArrowUpRight className="text-base sm:text-lg" aria-hidden="true" />
                     {lnk.label}
                   </a>
                 ))}
@@ -183,4 +183,4 @@ const CardNav: React.FC<CardNavProps> = ({
   );
 };
 
-export default CardNav;
+export default CardNav;

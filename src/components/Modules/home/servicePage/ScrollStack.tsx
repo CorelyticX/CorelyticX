@@ -16,7 +16,7 @@ interface ScrollStackProps {
 
 export const ScrollStackItem: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="scroll-stack-card sticky top-[10vh] border border-white/10 shadow-2xl overflow-hidden rounded-[32px] bg-[#0a0a0a]">
+    <div className="scroll-stack-card sticky top-[10vh] border border-white/10 shadow-2xl overflow-hidden rounded-lg sm:rounded-2xl md:rounded-3xl bg-[#0a0a0a]">
       {children}
     </div>
   );
@@ -60,7 +60,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
   }, [baseScale, itemScale]);
 
   return (
-    <div ref={containerRef} className="scroll-stack-container relative flex flex-col gap-[20vh] px-4 md:px-20 pb-[20vh]">
+    <div ref={containerRef} className="scroll-stack-container relative flex flex-col gap-[15vh] sm:gap-[18vh] md:gap-[20vh] px-2 sm:px-6 md:px-12 lg:px-20 pb-[15vh] sm:pb-[18vh] md:pb-[20vh]">
       {children}
     </div>
   );

@@ -1,0 +1,211 @@
+/* ============================================
+   RESPONSIVE DESIGN UTILITIES
+   Mobile-First Approach
+   ============================================ */
+
+/* 
+  TAILWIND BREAKPOINTS:
+  - sm: 640px (small phones, landscape mode)
+  - md: 768px (tablets)
+  - lg: 1024px (small laptops)
+  - xl: 1280px (desktops)
+  - 2xl: 1536px (large screens)
+*/
+
+/* ============================================
+   TYPOGRAPHY SCALING
+   ============================================ */
+
+/* Text Size Scale (Mobile First):
+   - Mobile: smallest sizes for optimal readability on small screens
+   - sm: slightly larger for landscape & small tablets
+   - md: tablet sizes
+   - lg: laptop sizes
+   - xl: large desktop sizes
+*/
+
+.responsive-heading-1 {
+  @apply text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tighter;
+}
+
+.responsive-heading-2 {
+  @apply text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-bold;
+}
+
+.responsive-heading-3 {
+  @apply text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold;
+}
+
+.responsive-subheading {
+  @apply text-base sm:text-lg md:text-2xl lg:text-3xl;
+}
+
+.responsive-body {
+  @apply text-sm sm:text-base md:text-lg lg:text-xl;
+}
+
+.responsive-caption {
+  @apply text-xs sm:text-sm md:text-base;
+}
+
+/* ============================================
+   SPACING SCALE
+   ============================================ */
+
+/* Padding Scale (Mobile First):
+   - Mobile: px-4 (16px)
+   - sm: px-6 (24px)
+   - md: px-8 or px-10 (32-40px)
+   - lg: px-12 or more (48px+)
+*/
+
+.responsive-container-px {
+  @apply px-4 sm:px-6 md:px-8 lg:px-12;
+}
+
+.responsive-container-py {
+  @apply py-12 sm:py-16 md:py-20 lg:py-24;
+}
+
+/* Gap Scale for flex/grid (Mobile First) */
+.responsive-gap-small {
+  @apply gap-2 sm:gap-3 md:gap-4 lg:gap-6;
+}
+
+.responsive-gap-medium {
+  @apply gap-4 sm:gap-6 md:gap-8 lg:gap-12;
+}
+
+.responsive-gap-large {
+  @apply gap-6 sm:gap-8 md:gap-12 lg:gap-16;
+}
+
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
+
+/* Image sizing responsive */
+.responsive-logo {
+  @apply h-6 sm:h-7 md:h-8 w-auto;
+}
+
+.responsive-icon {
+  @apply h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 lg:h-8 lg:w-8;
+}
+
+/* Button sizing */
+.responsive-button-sm {
+  @apply px-4 sm:px-6 md:px-8 py-2 sm:py-3 text-xs sm:text-sm md:text-base;
+}
+
+.responsive-button-md {
+  @apply px-6 sm:px-8 md:px-12 lg:px-16 py-3 sm:py-4 md:py-5 lg:py-6 text-sm sm:text-base md:text-lg lg:text-xl;
+}
+
+/* ============================================
+   MOBILE-SPECIFIC UTILITIES
+   ============================================ */
+
+/* Hide elements on mobile, show on desktop */
+.hide-mobile {
+  @apply hidden sm:block;
+}
+
+.show-mobile {
+  @apply block sm:hidden;
+}
+
+/* Touch-friendly hit targets (min 44x44px) */
+.touch-target {
+  @apply min-h-11 min-w-11 flex items-center justify-center;
+}
+
+/* ============================================
+   RESPONSIVE GRID
+   ============================================ */
+
+/* Auto-responsive grid: 1 col mobile, 2 cols tablet, 3 cols desktop */
+.responsive-grid-auto {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6;
+}
+
+/* 1-2 column grid (common for cards) */
+.responsive-grid-12 {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6;
+}
+
+/* ============================================
+   VIEWPORT-SPECIFIC CLASSES
+   ============================================ */
+
+@media (max-width: 640px) {
+  .hide-mobile {
+    display: none !important;
+  }
+  
+  .mobile-only {
+    display: block !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hide-tablet {
+    display: none !important;
+  }
+  
+  .tablet-only {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hide-desktop {
+    display: none !important;
+  }
+  
+  .desktop-only {
+    display: block !important;
+  }
+}
+
+/* ============================================
+   RESPONSIVE LINE HEIGHTS
+   ============================================ */
+
+/* Heading line heights (tighter on mobile) */
+.responsive-heading-line {
+  @apply leading-tight sm:leading-snug md:leading-normal;
+}
+
+/* Body line heights */
+.responsive-body-line {
+  @apply leading-relaxed sm:leading-relaxed md:leading-relaxed;
+}
+
+/* ============================================
+   RESPONSIVE POSITIONING
+   ============================================ */
+
+/* Common responsive height patterns */
+.responsive-section-height {
+  @apply h-screen sm:h-screen md:h-screen lg:h-screen;
+}
+
+/* Common responsive width patterns */
+.responsive-max-width {
+  @apply max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl;
+}
+
+/* ============================================
+   BORDER & RADIUS RESPONSIVE
+   ============================================ */
+
+/* Rounded corners responsive */
+.responsive-rounded {
+  @apply rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-3xl;
+}
+
+/* Divider line responsive thickness */
+.responsive-divider {
+  @apply h-0.5 sm:h-1 bg-white/20;
+}

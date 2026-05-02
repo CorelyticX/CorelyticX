@@ -49,23 +49,23 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-black py-20">
+    <section className="bg-black py-12 sm:py-16 md:py-20 lg:py-24">
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto px-6 mb-12">
-        <span className="text-purple-500 font-mono tracking-widest uppercase text-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+        <span className="text-purple-500 font-mono tracking-widest uppercase text-xs sm:text-sm md:text-base">
           🧭 CorelyticX — Services
         </span>
-        <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter mt-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tighter mt-3 sm:mt-4 md:mt-6">
           What We Build
         </h2>
-        <div className="h-[1px] w-24 bg-purple-500 my-6" />
-        <p className="text-white/50 text-xl max-w-xl font-light">
+        <div className="h-0.5 sm:h-1 w-16 sm:w-20 md:w-24 bg-purple-500 my-4 sm:my-5 md:my-6" />
+        <p className="text-white/50 text-sm sm:text-base md:text-lg lg:text-xl max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl font-light leading-relaxed">
           End-to-end digital systems designed to grow your business from idea to real-world impact.
         </p>
       </div>
 
       {/* Scroll Stack Implementation */}
-      <div className="h-[80vh] w-full">
+      <div className="h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] w-full">
         <ScrollStack 
           itemDistance={80} 
           itemScale={0.05} 
@@ -74,27 +74,27 @@ const Services = () => {
         >
           {services.map((service, index) => (
             <ScrollStackItem key={index}>
-              <div className={`w-full h-full bg-gradient-to-br ${service.color} backdrop-blur-xl border ${service.border} p-8 md:p-12 flex flex-col justify-between group`}>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <span className="text-purple-500 font-mono text-xl">{service.number}</span>
-                    <h3 className="text-3xl md:text-5xl font-bold text-white mt-2 group-hover:translate-x-2 transition-transform duration-500">
+              <div className={`w-full h-full bg-gradient-to-br ${service.color} backdrop-blur-xl border ${service.border} p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-between group`}>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 sm:gap-0">
+                  <div className="min-w-0">
+                    <span className="text-purple-500 font-mono text-sm sm:text-base md:text-lg lg:text-xl">{service.number}</span>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mt-2 sm:mt-3 md:mt-4 group-hover:translate-x-2 transition-transform duration-500 leading-tight">
                       {service.title}
                     </h3>
                   </div>
-                  <div className="hidden md:block w-16 h-16 rounded-full border border-white/10 flex items-center justify-center text-white/20 text-3xl group-hover:border-purple-500 group-hover:text-purple-500 transition-all">
+                  <div className="hidden sm:flex w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full border border-white/10 flex-shrink-0 items-center justify-center text-white/20 text-2xl md:text-3xl group-hover:border-purple-500 group-hover:text-purple-500 transition-all">
                     ↗
                   </div>
                 </div>
 
-                <div className="mt-6">
-                  <p className="text-white/70 text-lg md:text-2xl max-w-2xl font-light leading-relaxed">
+                <div className="mt-4 sm:mt-6 md:mt-8">
+                  <p className="text-white/70 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-2xl font-light leading-relaxed">
                     {service.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-3 mt-8">
+                  <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 mt-6 sm:mt-8">
                     {service.tags.map((tag, i) => (
-                      <span key={i} className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-sm font-mono">
+                      <span key={i} className="px-3 py-1 sm:px-4 sm:py-1.5 md:px-5 md:py-2 rounded-full bg-white/5 border border-white/10 text-white/50 text-xs sm:text-sm md:text-base font-mono">
                         {tag}
                       </span>
                     ))}
