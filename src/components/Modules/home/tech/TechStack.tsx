@@ -2,6 +2,7 @@
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { motion } from "motion/react";
+import { Cloud } from "lucide-react";
 import {
   SiNextdotjs,
   SiReact,
@@ -9,7 +10,6 @@ import {
   SiNodedotjs,
   SiPostgresql,
   SiDocker,
-  SiAmazonwebservices,
   SiTailwindcss,
   SiGraphql,
   SiPython,
@@ -24,7 +24,7 @@ const technologies = [
   { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
   { name: "Docker", icon: SiDocker, color: "#2496ED" },
-  { name: "AWS", icon: SiAmazonwebservices, color: "#FF9900" },
+  { name: "AWS", icon: Cloud, color: "#FF9900" },
   { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
   { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
   { name: "Python", icon: SiPython, color: "#3776AB" },

@@ -5,7 +5,6 @@ import CountUp from "@/components/CountUp";
 import ScrollReveal from "@/components/ScrollReveal";
 import { FloatingOrbs } from "@/components/ui/FloatingOrbs";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { cn } from "@/lib/utils";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import {
