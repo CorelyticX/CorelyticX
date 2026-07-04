@@ -2,7 +2,6 @@
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { BorderBeam } from "@/components/ui/BorderBeam";
-import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import { Gauge, Shield, Zap, Users, Clock, Layers } from "lucide-react";
 
