@@ -2,6 +2,7 @@
 
 import CountUp from "@/components/CountUp";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SiteContainer } from "@/components/ui/SiteContainer";
 import { FloatingOrbs } from "@/components/ui/FloatingOrbs";
 import { motion } from "motion/react";
 
@@ -21,7 +22,7 @@ const ClientMetrics = () => {
     >
       <FloatingOrbs />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <SiteContainer className="relative">
         <SectionHeader
           label="Impact"
           title="Numbers that speak"
@@ -50,7 +51,7 @@ const ClientMetrics = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </SiteContainer>
     </section>
   );
 };

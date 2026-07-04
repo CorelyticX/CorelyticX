@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SiteContainer } from "@/components/ui/SiteContainer";
 import { BorderBeam } from "@/components/ui/BorderBeam";
 import { motion } from "motion/react";
 import { Gauge, Shield, Zap, Users, Clock, Layers } from "lucide-react";
@@ -47,7 +48,7 @@ const WhyChoose = () => {
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.06),transparent_40%)]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <SiteContainer className="relative">
         <SectionHeader
           label="Why CorelyticX"
           title="The difference is in the details"
@@ -77,7 +78,7 @@ const WhyChoose = () => {
             );
           })}
         </div>
-      </div>
+      </SiteContainer>
     </section>
   );
 };

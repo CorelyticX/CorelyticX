@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SiteContainer } from "@/components/ui/SiteContainer";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import { Plus, Minus } from "lucide-react";
@@ -103,7 +104,7 @@ const FAQ = () => {
       className="relative bg-[#030014] py-24 md:py-32"
       aria-labelledby="faq-heading"
     >
-      <div className="mx-auto max-w-3xl px-6 lg:px-8">
+      <SiteContainer className="max-w-3xl">
         <SectionHeader
           label="FAQ"
           title="Common questions"
@@ -122,7 +123,7 @@ const FAQ = () => {
             />
           ))}
         </div>
-      </div>
+      </SiteContainer>
     </section>
   );
 };

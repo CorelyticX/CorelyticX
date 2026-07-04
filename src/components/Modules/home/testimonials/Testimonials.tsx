@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SiteContainer } from "@/components/ui/SiteContainer";
 import { InfiniteMarquee } from "@/components/ui/InfiniteMarquee";
 import { Star } from "lucide-react";
 
@@ -73,14 +74,14 @@ const Testimonials = () => {
       className="relative overflow-hidden bg-[#030014] py-24 md:py-32"
       aria-labelledby="testimonials-heading"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <SiteContainer>
         <SectionHeader
           label="Testimonials"
           title="Trusted by builders"
           description="What founders and engineering leaders say after working with us."
           align="center"
         />
-      </div>
+      </SiteContainer>
 
       <InfiniteMarquee speed="slow" className="mt-4">
         {testimonials.map((t) => (

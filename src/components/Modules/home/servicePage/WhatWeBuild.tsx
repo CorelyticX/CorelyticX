@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SiteContainer } from "@/components/ui/SiteContainer";
 import { BorderBeam } from "@/components/ui/BorderBeam";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
@@ -147,7 +148,7 @@ const WhatWeBuild = () => {
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.08),transparent_50%)]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <SiteContainer className="relative">
         <SectionHeader
           label="Capabilities"
           title="What we build"
@@ -159,7 +160,7 @@ const WhatWeBuild = () => {
             <BentoCard key={service.title} service={service} index={index} />
           ))}
         </div>
-      </div>
+      </SiteContainer>
     </section>
   );
 };

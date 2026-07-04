@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SiteContainer } from "@/components/ui/SiteContainer";
 import { cn } from "@/lib/utils";
 import { motion, useInView } from "motion/react";
 import { useRef, useState } from "react";
@@ -59,7 +60,7 @@ const DevelopmentProcess = () => {
       className="relative bg-[#030014] py-24 md:py-32"
       aria-labelledby="process-heading"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <SiteContainer>
         <SectionHeader
           label="Process"
           title="How we deliver"
@@ -131,7 +132,7 @@ const DevelopmentProcess = () => {
             </div>
           </motion.div>
         </div>
-      </div>
+      </SiteContainer>
     </section>
   );
 };

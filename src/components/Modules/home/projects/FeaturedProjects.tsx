@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SiteContainer } from "@/components/ui/SiteContainer";
 import { BorderBeam } from "@/components/ui/BorderBeam";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
@@ -36,7 +37,7 @@ const FeaturedProjects = () => {
       className="relative bg-[#030014] py-24 md:py-32"
       aria-labelledby="projects-heading"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <SiteContainer>
         <SectionHeader
           label="Selected work"
           title="Featured projects"
@@ -89,7 +90,7 @@ const FeaturedProjects = () => {
             </motion.article>
           ))}
         </div>
-      </div>
+      </SiteContainer>
     </section>
   );
 };

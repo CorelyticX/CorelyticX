@@ -14,9 +14,9 @@ import ContactCTA from "./contact/ContactCTA";
 
 const Homepage = () => {
   return (
-    <div className="bg-[#030014] font-sans text-white selection:bg-purple-500/30">
+    <div className="min-h-screen w-full overflow-x-hidden bg-[#030014] font-sans text-white selection:bg-purple-500/30">
       <Navbar />
-      <main>
+      <main className="w-full">
         <Banner />
         <AboutSection />
         <WhatWeBuild />

@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SiteContainer } from "@/components/ui/SiteContainer";
 import { motion } from "motion/react";
 import { Cloud } from "lucide-react";
 import {
@@ -41,7 +42,7 @@ const TechStack = () => {
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.05),transparent_60%)]" />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <SiteContainer className="relative">
         <SectionHeader
           label="Technology"
           title="Built on proven foundations"
@@ -78,7 +79,7 @@ const TechStack = () => {
             );
           })}
         </div>
-      </div>
+      </SiteContainer>
     </section>
   );
 };

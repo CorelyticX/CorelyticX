@@ -5,6 +5,7 @@ import CountUp from "@/components/CountUp";
 import ScrollReveal from "@/components/ScrollReveal";
 import { FloatingOrbs } from "@/components/ui/FloatingOrbs";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SiteContainer } from "@/components/ui/SiteContainer";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import {
@@ -149,7 +150,7 @@ const AboutSection = () => {
     >
       <FloatingOrbs />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <SiteContainer className="relative">
         <SectionHeader
           label="About CorelyticX"
           title="Built for teams who ship."
@@ -242,7 +243,7 @@ const AboutSection = () => {
             </div>
           </motion.div>
         </div>
-      </div>
+      </SiteContainer>
     </section>
   );
 };

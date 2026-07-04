@@ -3,6 +3,7 @@
 import Magnet from "@/components/Magnet";
 import { AuroraBackground } from "@/components/ui/AuroraBackground";
 import { ShinyButton } from "@/components/ui/ShinyButton";
+import { SiteContainer } from "@/components/ui/SiteContainer";
 import BlurText from "@/components/BlurText";
 import { motion } from "motion/react";
 import { Mail, Calendar } from "lucide-react";
@@ -17,7 +18,7 @@ const ContactCTA = () => {
       <AuroraBackground />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.12),transparent_60%)]" />
 
-      <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-8">
+      <SiteContainer className="relative max-w-4xl text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -63,7 +64,7 @@ const ContactCTA = () => {
             </Magnet>
           </div>
         </motion.div>
-      </div>
+      </SiteContainer>
     </section>
   );
 };

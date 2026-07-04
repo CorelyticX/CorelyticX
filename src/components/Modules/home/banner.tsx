@@ -36,7 +36,7 @@ const Banner = () => {
           />
         </div>
 
-        <div className="relative z-10 flex flex-col items-center px-6 text-center">
+        <div className="relative z-10 flex w-full max-w-5xl flex-col items-center px-6 text-center lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

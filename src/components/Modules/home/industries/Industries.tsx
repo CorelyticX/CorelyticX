@@ -1,6 +1,7 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SiteContainer } from "@/components/ui/SiteContainer";
 import { BorderBeam } from "@/components/ui/BorderBeam";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
@@ -65,7 +66,7 @@ const Industries = () => {
       className="relative bg-[#030014] py-24 md:py-32"
       aria-labelledby="industries-heading"
     >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <SiteContainer>
         <SectionHeader
           label="Industries"
           title="Where we create impact"
@@ -108,7 +109,7 @@ const Industries = () => {
             );
           })}
         </div>
-      </div>
+      </SiteContainer>
     </section>
   );
 };
